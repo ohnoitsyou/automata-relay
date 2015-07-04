@@ -1,0 +1,16 @@
+<div id="relay" class="relays">
+  <fieldset>
+    <legend>Master</legend>
+    <input type="button" value="All Off" onClick="Relay.allOff()">
+    <input type="button" value="All On" onClick="Relay.allOn()">
+    <input type="button" value="Toggle Silent" onClick="Relay.toggleSilent()">
+  </fieldset>
+  {{#each relays}}
+  <fieldset>
+    <legend>Relay {{this}}</legend>
+    <input type="button" value="On" onClick="Relay.relayOn({{@index}})">
+    <input type="button" value="Off" onClick="Relay.relayOff({{@index}})">
+    <input type="button" value="Toggle" onClick="Relay.relayToggle({{@index}})">
+  </fieldset>
+  {{/each}}
+</div>
